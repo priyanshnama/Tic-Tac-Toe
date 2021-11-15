@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Tic-Tac-Toe</string>
     <string name="play">play</string>
+    <string name="signin">signin</string>
+    <string name="default_web_client_id" translatable="false">364944604484-o6fo836uq2n9alcav8dvss8ghgca84v4.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">364944604484</string>
+    <string name="google_api_key" translatable="false">AIzaSyCLyvBSSQtpSneGR4v42pRqAH_yt7dIFgM</string>
+    <string name="google_app_id" translatable="false">1:364944604484:android:cccaac9987e2d5a62aab11</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCLyvBSSQtpSneGR4v42pRqAH_yt7dIFgM</string>
+    <string name="google_storage_bucket" translatable="false">tic-tac-toe-331911.appspot.com</string>
+    <string name="project_id" translatable="false">tic-tac-toe-331911</string>
 </resources>

@@ -9,4 +9,6 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCLyvBSSQtpSneGR4v42pRqAH_yt7dIFgM</string>
     <string name="google_storage_bucket" translatable="false">tic-tac-toe-331911.appspot.com</string>
     <string name="project_id" translatable="false">tic-tac-toe-331911</string>
+    <string name="offline">offline</string>
+    <string name="online">online</string>
 </resources>

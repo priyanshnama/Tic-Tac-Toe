@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         auth = FirebaseAuth.getInstance()
         if(auth.currentUser!=null) updateUI()
+
         binding.playButton.setOnClickListener {
             startActivity(Intent(this,HomeActivity::class.java))
             finish()

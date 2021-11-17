@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,HomeActivity::class.java))
             finish()
         }
-        binding.signinButton.setOnClickListener { singIn() }
+        binding.signInButton.setOnClickListener { singIn() }
 
         val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun singIn() {
         binding.progressBar.visibility = View.VISIBLE
-        binding.signinButton.visibility = View.GONE
+        binding.signInButton.visibility = View.GONE
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI() {
-        binding.signinButton.visibility = View.GONE
+        binding.signInButton.visibility = View.GONE
         binding.playButton.visibility = View.VISIBLE
         binding.progressBar.visibility = View.GONE
     }

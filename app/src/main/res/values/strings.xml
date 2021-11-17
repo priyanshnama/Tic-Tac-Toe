@@ -11,4 +11,5 @@
     <string name="project_id" translatable="false">tic-tac-toe-331911</string>
     <string name="offline">offline</string>
     <string name="online">online</string>
+    <string name="uiElement">uiElement</string>
 </resources>

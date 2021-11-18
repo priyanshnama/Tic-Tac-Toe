@@ -203,12 +203,13 @@
             tools:ignore="HardcodedText" />
 
         <ProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="280dp"
             android:layout_height="10dp"
             android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/clockImg"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/clockImg"
             android:background="@drawable/game_buttons"
             android:backgroundTint="@android:color/holo_green_light" />
 

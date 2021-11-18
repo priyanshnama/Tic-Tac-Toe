@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.playButton.setOnClickListener {
             startActivity(Intent(this,HomeActivity::class.java))
-            finish()
         }
         binding.signInButton.setOnClickListener { singIn() }
 

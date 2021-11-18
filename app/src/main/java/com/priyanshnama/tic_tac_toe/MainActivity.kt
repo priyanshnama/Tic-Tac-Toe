@@ -30,9 +30,14 @@ class MainActivity : AppCompatActivity() {
         if(auth.currentUser!=null) updateUI()
 
         binding.playButton.setOnClickListener {
-            startActivity(Intent(this,HomeActivity::class.java))
+            startActivity(Intent(this,GameModeActivity::class.java))
         }
         binding.signInButton.setOnClickListener { singIn() }
+
+        binding.offlineButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra("mode","offline")
+            startActivity(intent) }
 
         val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))

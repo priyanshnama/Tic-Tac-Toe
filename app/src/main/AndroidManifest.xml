@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToe">
         <activity
-            android:name=".OnlineGameActivity"
-            android:exported="false" />
-        <activity
             android:name=".GameModeActivity"
             android:exported="false" />
         <activity

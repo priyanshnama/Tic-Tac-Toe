@@ -222,70 +222,68 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.50121653" />
 
-    <View
-        android:layout_width="1dp"
-        android:layout_height="150dp"
-        android:alpha="0.8"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/timer" />
-
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="100dp"
         android:layout_height="150dp"
         android:background="@drawable/game_buttons"
-        android:orientation="vertical"
         android:elevation="15dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="HardcodedText"
-        app:layout_constraintTop_toBottomOf="@id/timer">
+        app:layout_constraintTop_toBottomOf="@id/timer"
+        tools:ignore="HardcodedText">
+
         <ImageView
             android:layout_width="24sp"
             android:layout_height="24dp"
-            android:background="@android:color/holo_green_light"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
+            android:background="@android:color/holo_green_light"
             android:contentDescription="profileImage" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Phani"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
+            android:text="Phani"
             android:textSize="18sp"
             tools:ignore="HardcodedText" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="X"
-            android:textSize="28sp"
-            android:layout_marginTop="8dp"
             android:layout_gravity="center"
-            android:textColor="@color/black"/>
+            android:layout_marginTop="8dp"
+            android:text="O"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
         <TextView
+            android:id="@+id/score1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
             android:text="2 Wins"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
             android:textSize="16sp"
             tools:ignore="HardcodedText" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="100dp"
         android:layout_height="150dp"
         android:background="@drawable/game_buttons"
         android:elevation="15dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="HardcodedText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/timer">
+        app:layout_constraintTop_toBottomOf="@id/timer"
+        tools:ignore="HardcodedText">
 
         <ImageView
             android:layout_width="24sp"
@@ -314,6 +312,7 @@
             android:textSize="28sp" />
 
         <TextView
+            android:id="@+id/score2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -322,5 +321,16 @@
             android:textSize="16sp"
             tools:ignore="HardcodedText" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/rightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

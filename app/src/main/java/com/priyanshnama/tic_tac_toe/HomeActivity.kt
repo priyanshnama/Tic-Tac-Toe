@@ -117,6 +117,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun changePlayer() {
         moves++
+        binding.rightArrow.rotation = 90.0F*(1 + currentPlayer)
         currentPlayer = if (currentPlayer == 1) -1 else 1
     }
 }

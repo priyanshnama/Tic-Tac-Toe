@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.priyanshnama.tic_tac_toe.utils.Checker
 import com.priyanshnama.tic_tac_toe.databinding.ActivityHomeBinding
+import kotlinx.coroutines.*
 
 class HomeActivity : AppCompatActivity() {
 
@@ -88,9 +89,13 @@ class HomeActivity : AppCompatActivity() {
                 changePlayer()
             }
         }
-        val winner = checker.checkBoard(choicesXO)
-        if(winner!="none") showDialog("$winner wins")
-        if(winner=="none" && moves==9) showDialog("Draw")
+        CoroutineScope(Dispatchers.IO).launch {
+            val winner = checker.checkBoard(choicesXO)
+            withContext(Dispatchers.Main) {
+                if(winner!="none") showDialog("$winner wins")
+                if(winner=="none" && moves==9) showDialog("Draw")
+            }
+        }
     }
 
     private fun showDialog(title: String) {
